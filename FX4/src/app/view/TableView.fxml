@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="app.controller.TableController">
+   <top>
+      <AnchorPane prefHeight="600.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="Table" layoutX="191.0" layoutY="126.0" prefHeight="200.0" prefWidth="291.0">
+              <columns>
+                <TableColumn fx:id="tb_id" prefWidth="36.0" text="ID" />
+                <TableColumn fx:id="tb_firstname" prefWidth="75.99996948242188" text="First Name" />
+                  <TableColumn fx:id="tb_lastname" prefWidth="74.99990844726562" text="Last Name" />
+                  <TableColumn fx:id="tb_gsalary" prefWidth="101.0" text="Gross Salary" />
+              </columns>
+            </TableView>
+            <HBox layoutX="192.0" layoutY="326.0" prefHeight="50.0" prefWidth="289.0">
+               <children>
+                  <Button fx:id="btn_refresh" mnemonicParsing="false" onAction="#btnrefreshaction" prefHeight="50.0" prefWidth="77.0" text="Refresh" />
+                  <Button fx:id="btn_delete" mnemonicParsing="false" onAction="#btndeleteactioc" prefHeight="50.0" prefWidth="77.0" text="Delete" />
+                  <Button fx:id="btn_update" mnemonicParsing="false" onAction="#btnupdateaction" prefHeight="50.0" prefWidth="77.0" text="Update" />
+                  <Button fx:id="btn_insert" mnemonicParsing="false" onAction="#btninsertaction" prefHeight="50.0" prefWidth="77.0" text="Insert" />
+               </children>
+            </HBox>
+            <TextField fx:id="tf_firstname" disable="true" layoutX="109.0" layoutY="427.0" />
+            <TextField fx:id="tf_gsalary" disable="true" layoutX="108.0" layoutY="500.0" />
+            <TextField fx:id="tf_lastname" disable="true" layoutX="109.0" layoutY="463.0" />
+            <Label disable="true" layoutX="31.0" layoutY="432.0" text="First Name" />
+            <Label disable="true" layoutX="31.0" layoutY="468.0" text="Last Name" />
+            <Label disable="true" layoutX="25.0" layoutY="505.0" text="Gross Salary" />
+            <Button fx:id="btn_commit" disable="true" layoutX="159.0" layoutY="540.0" mnemonicParsing="false" onAction="#btncommitaction" text="insert" />
+            <Button fx:id="btn_commitupd" disable="true" layoutX="76.0" layoutY="540.0" mnemonicParsing="false" onAction="#btncommitactionupd" text="update" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
